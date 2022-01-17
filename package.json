@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve -c webpack/dev.js",
     "test": "jest --config jest.config.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "register-git-hooks": "npx husky-init"
   },
   "author": "",
   "license": "ISC",
