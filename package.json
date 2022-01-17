@@ -4,8 +4,6 @@
   "description": "Panda utils",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -c webpack/common.js --mode=production",
-    "build:prod": "webpack -c webpack/prod.js",
     "start": "webpack serve -c webpack/dev.js",
     "test": "jest --config jest.config.json"
   },
