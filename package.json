@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve -c webpack/dev.js",
     "test": "jest --config jest.config.json",
-    "husky:prepare": "husky install"
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-react": "7.19.0",
-    "husky": "7.0.4",
+    "husky": "^7.0.0",
     "typescript": "4.3.4",
     "webpack-dev-server": "3.11.2"
   },
@@ -35,7 +35,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run test"
+      "pre-push": "npm run test",
+      "pre-commit": "npm run test"
     }
   }
 }
