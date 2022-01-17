@@ -1,4 +1,4 @@
-import { PathObject } from '../types';
+import { PathObject } from '../../types';
 
 export const createPathObject = <T>(leafValue: T, path: string[]): PathObject<T> => {
     if (!path.length) {

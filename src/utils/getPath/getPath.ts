@@ -1,4 +1,4 @@
-import { PathObject } from '../types';
+import { PathObject } from '../../types';
 
 export const getPath = <T>(leafValue: T, nested: PathObject<T> | T): string[] => {
     if (nested === leafValue) {
