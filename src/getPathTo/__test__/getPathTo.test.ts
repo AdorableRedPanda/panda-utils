@@ -14,4 +14,10 @@ describe('getPathTo tests', () => {
 
         expect(getPathTo(value, obj)).toEqual(pathToValue);
     });
+
+    it('should throws error if argument is not path object', () => {
+        const value = 0;
+        const obj = { a: { b: { c: 0 }, d: 0 } };
+        expect(() => getPathTo(value, obj)).toThrow(Error);
+    });
 });
