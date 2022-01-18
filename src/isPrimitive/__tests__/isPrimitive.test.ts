@@ -1,6 +1,6 @@
 import { isPrimitive } from '../isPrimitive';
 
-const Objects = [{}, { foo: 'bar' }, new Number(0) ];
+const Objects = [{}, { foo: 'bar' }, Object(32) ];
 const Arrays = [ [], new Array([]), [0, 1, 2]];
 const Primitives = [
     null,

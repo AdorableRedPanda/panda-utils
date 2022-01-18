@@ -1,6 +1,6 @@
-import { PathObject } from '../../types';
+import { Path, PathObject } from '../types';
 
-export const getPath = <T>(leafValue: T, nested: PathObject<T> | T): string[] => {
+export const getPathTo = <T>(leafValue: T, nested: PathObject<T> | T): Path => {
     if (nested === leafValue) {
         return [];
     }
@@ -12,5 +12,5 @@ export const getPath = <T>(leafValue: T, nested: PathObject<T> | T): string[] =>
     }
 
     const [key, next] = entries[0];
-    return [key, ...getPath(leafValue, next)];
+    return [key, ...getPathTo(leafValue, next)];
 };

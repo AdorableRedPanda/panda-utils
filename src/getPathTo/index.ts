@@ -1,0 +1,1 @@
+export { getPathTo } from './getPathTo';

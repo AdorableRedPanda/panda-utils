@@ -1,10 +1,10 @@
-import { getPath } from '../getPath';
+import { getPathTo } from '../getPathTo';
 
-describe('getPath tests', () => {
+describe('getPathTo tests', () => {
     it('should return single key for wimple object', () => {
         const value = () => null;
         const fieldKey = 'field';
-        expect(getPath(value, { [fieldKey]: value })).toEqual([fieldKey]);
+        expect(getPathTo(value, { [fieldKey]: value })).toEqual([fieldKey]);
     });
 
     it('should save order of keys', () => {
@@ -12,6 +12,6 @@ describe('getPath tests', () => {
         const obj = { outer: { intermediate: { deep: { deeper: { deepest: value } } } } };
         const pathToValue = ['outer', 'intermediate', 'deep', 'deeper', 'deepest'];
 
-        expect(getPath(value, obj)).toEqual(pathToValue);
+        expect(getPathTo(value, obj)).toEqual(pathToValue);
     });
 });

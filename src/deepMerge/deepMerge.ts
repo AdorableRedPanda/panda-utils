@@ -1,9 +1,8 @@
 import { isPrimitive } from '../isPrimitive';
 import { naiveClone } from '../naiveClone';
+import { MergeResult } from '../types';
 
 type MergeTarget<T> = Record<string, T>;
-
-type MergeResult<F, S> = S | S & F;
 
 const canBeMerge = <T>(value: unknown): value is MergeTarget<T> => !(isPrimitive(value) || Array.isArray(value));
 
