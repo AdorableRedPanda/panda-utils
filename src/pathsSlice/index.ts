@@ -1,0 +1,1 @@
+export { pathsSlice } from './pathsSlice';

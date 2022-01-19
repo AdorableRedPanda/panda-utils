@@ -3,14 +3,14 @@ import { createPathObject } from '../createPathObject';
 describe('createPathObject tests', () => {
     it('should not change value', () => {
         const func = () => '!';
-        expect(createPathObject(func, ['field']).field).toBe(func);
+        expect(createPathObject([['field'], func]).field).toBe(func);
         const item = 'hi';
-        expect(createPathObject(item, ['field']).field).toBe(item);
+        expect(createPathObject([['field'], item]).field).toBe(item);
     });
 
     it('should not change ref value', () => {
         const value = { property: 'hello' };
-        const nested = createPathObject(value, ['field']);
+        const nested = createPathObject([ ['field'], value]);
         expect(value).toBe(nested.field);
     });
 
@@ -19,6 +19,6 @@ describe('createPathObject tests', () => {
         const obj = { outer: { intermediate: { deep: { deeper: { deepest: value } } } } };
         const pathToValue = ['outer', 'intermediate', 'deep', 'deeper', 'deepest'];
 
-        expect(createPathObject(value, pathToValue)).toEqual(obj);
+        expect(createPathObject([pathToValue, value])).toEqual(obj);
     });
 });

@@ -1,19 +1,20 @@
 import { createPathObject } from '../createPathObject';
-import { getPathTo } from '../../getPathTo';
+import { toFlat } from '../../toFlat';
 
-describe('createPathObject and getPathTo compositions', () => {
-    it('createPathObject * getPathTo returns initial object', () => {
+describe('createPathObject and toFlat compositions', () => {
+    it('createPathObject * toFlat returns initial object', () => {
         const value = 0;
         const obj = { a: { b: { c: { d: { e: value } } } } };
-        const compositionRes = createPathObject(value, getPathTo(value, obj));
+        const path = toFlat(obj)[0];
+        const compositionRes = createPathObject([path, value]);
         expect(obj).toEqual(compositionRes);
     });
 
 
-    it('getPathTo * createPathObject returns initial path', () => {
+    it('toFlat * createPathObject returns initial flat presentation', () => {
         const value = 0;
         const path = ['a', 'b', 'c', 'd', 'e'];
-        const compositionRes = getPathTo(value, createPathObject(value, path));
-        expect(path).toEqual(compositionRes);
+        const flat = toFlat(createPathObject([path, value]));
+        expect(flat).toEqual([path, value]);
     });
 });

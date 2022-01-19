@@ -2,7 +2,11 @@
 
 Simple utilities for work with objects like trees.
 
-    Path object - object with a single key, value can be path object or leaf. 
+    Leaf - primitives or any objects with keys count not equal to 1.
+
+    Path object - object with a single key, value can be path object or leaf.
+
+    Flat presentation of path object - [path, leaf].
 
 ## Exported functions
 
@@ -17,5 +21,5 @@ creates new object with clones of values
 takes two arguments for merge, returns second clone of second if arguments cannot be merged.
 Primitives, functions and arrays cannot be merged.
 
-### getPathTo
-returns path to value (reference equality), throws Error if argument is not path object.
+### toFlat
+gets path object and returns flat presentation
