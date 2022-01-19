@@ -21,4 +21,8 @@ describe('createPathObject tests', () => {
 
         expect(createPathObject([pathToValue, value])).toEqual(obj);
     });
+
+    it('should throw error in case of empty array', () => {
+        expect(() => createPathObject([[], 0])).toThrow(Error);
+    });
 });

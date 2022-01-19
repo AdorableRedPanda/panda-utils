@@ -11,7 +11,7 @@ Simple utilities for work with objects like trees.
 ## Exported functions
 
 ### createPathObject
-creates path objects from leaf and path
+creates path objects from leaf and path. Throw error in case of empty path.
 
 ### naiveClone
 clones primitives by value - functions by reference, creates new array with clones of items,
