@@ -23,3 +23,6 @@ Primitives, functions and arrays cannot be merged.
 
 ### toFlat
 gets path object and returns flat presentation
+
+### pathsSlice
+slice object into array of path objects.

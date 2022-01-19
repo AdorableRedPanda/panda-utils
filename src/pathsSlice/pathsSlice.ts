@@ -1,10 +1,8 @@
-import { PathObject } from '../types';
+import { Leaf, PathObject } from '../types';
 import { isPrimitive } from '../isPrimitive';
 
-const isLeaf = (value: unknown) => isPrimitive(value) || Array.isArray(value);
-
-export const pathsSlice = <T>(value: T): (PathObject<T> | T)[] => {
-    if (isLeaf(value)) {
+export const pathsSlice = <T>(value: T): (PathObject<T> | Leaf<T>)[] => {
+    if (isPrimitive(value) || Array.isArray(value)) {
         return [value];
     }
 
