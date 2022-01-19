@@ -15,7 +15,7 @@ creates path objects from leaf and path. Throw error in case of empty path.
 
 ### naiveClone
 clones primitives by value - functions by reference, creates new array with clones of items,
-creates new object with clones of values
+creates new object with clones of values.
 
 ### deepMerge
 takes two arguments for merge, returns clone of second if arguments cannot be merged.
