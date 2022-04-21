@@ -7,8 +7,11 @@ module.exports = {
 	output: {
 		filename: 'index.js',
 		path: path.join(__dirname, '../dist'),
-		library: "red-panda-utils",
-		libraryTarget: "umd",
+		library: {
+			name: "red-panda-utils",
+			type: "umd"
+		},
+		globalObject: "this",
 		clean: true,
 	},
 
