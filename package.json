@@ -1,9 +1,9 @@
 {
   "name": "red-panda-utils",
-  "version": "1.0.32",
+  "version": "1.0.36",
   "description": "Utils for work with objects like trees",
   "main": "dist/index.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "webpack -c webpack/dev.js",
     "build": "webpack -c webpack/build.js",

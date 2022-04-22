@@ -3,3 +3,4 @@ export { createPathObject } from './createPathObject';
 export { deepMerge } from './deepMerge';
 export { naiveClone } from './naiveClone';
 export { pathsSlice } from './pathsSlice';
+export * from './types';
