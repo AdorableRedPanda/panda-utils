@@ -9,6 +9,7 @@
     "build": "webpack -c webpack/build.js",
     "test": "jest --config jest.config.json"
   },
+  "repository": "https://github.com/AdorableRedPanda/panda-utils",
   "author": "AdorableRedPanda",
   "license": "ISC",
   "devDependencies": {
