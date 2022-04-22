@@ -1,9 +1,9 @@
 {
   "name": "red-panda-utils",
-  "version": "1.0.3",
+  "version": "1.0.32",
   "description": "Utils for work with objects like trees",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "scripts": {
     "start": "webpack -c webpack/dev.js",
     "build": "webpack -c webpack/build.js",
@@ -25,7 +25,6 @@
   "dependencies": {
     "@babel/core": "7.11.6",
     "@babel/preset-typescript": "7.8.3",
-    "@babel/plugin-proposal-class-properties": "7.12.13",
     "webpack": "5.41.1",
     "webpack-cli": "4.7.2",
     "jest": "27.4.7",
